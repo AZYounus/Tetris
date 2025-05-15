@@ -44,6 +44,7 @@ int main()
     if (game.gameOver)
     {
       DrawTextEx(font, "GAME OVER", {320, 450}, 38, 2, WHITE);
+      DrawTextEx(font, "RESTART?", {320, 480}, 38, 2, WHITE);
     }
     DrawRectangleRounded({320, 55, 170, 60}, 0.3, 6, lightBlue);
 

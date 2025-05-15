@@ -66,10 +66,14 @@ void Game::HandleInput()
   int keyPressed = GetKeyPressed();
 
   // restart game
-  if (gameOver && keyPressed != 0)
+  if (gameOver && IsMouseButtonPressed(MOUSE_BUTTON_LEFT))
   {
-    gameOver = false;
-    Reset();
+    Vector2 mousePosition = GetMousePosition();
+    if (mousePosition.x >= 320 && mousePosition.x < 490 && mousePosition.y >= 480 && mousePosition.y < 540)
+    {
+      gameOver = false;
+      Reset();
+    }
   }
 
   switch(keyPressed)

@@ -74,6 +74,9 @@ void Game::HandleInput()
       gameOver = false;
       Reset();
     }
+  } else if (gameOver && keyPressed != 0) 
+  {
+    // do not do anything while game is over and user isn't pressing restart
   }
 
   switch(keyPressed)

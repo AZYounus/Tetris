@@ -10,6 +10,7 @@ class Game
     void Draw();
     void HandleInput();
     void MoveBlockDown();
+    void Reset();
     bool gameOver;
     int score;
     Music music;
@@ -23,7 +24,6 @@ class Game
     void RotateBlock();
     void LockBlock();
     bool BlockFits();
-    void Reset();
     void UpdateScore(int linesCleared, int moveDownPoints);
     Grid grid;
     std::vector<Block> blocks;

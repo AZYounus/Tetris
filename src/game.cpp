@@ -12,6 +12,7 @@ Game::Game()
   InitAudioDevice();
   music = LoadMusicStream("Sounds/music.mp3");
   PlayMusicStream(music);
+  pause = false;
   rotateSound = LoadSound("Sounds/rotate.mp3");
   clearSound = LoadSound("Sounds/clear.mp3");
 }
@@ -70,6 +71,13 @@ void Game::HandleInput()
 
   switch(keyPressed)
   {
+    case KEY_M:
+    {
+      pause = !pause;
+      if (pause) PauseMusicStream(music);
+      else ResumeMusicStream(music);
+    } break;
+
     case KEY_LEFT:
       MoveBlockLeft();
       break;

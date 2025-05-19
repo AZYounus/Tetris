@@ -14,6 +14,7 @@ class Game
     bool gameOver;
     int score;
     Music music;
+    bool pause;
 
   private:
     Block GetRandomBlock();

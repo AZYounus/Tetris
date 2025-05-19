@@ -63,6 +63,16 @@ void Game::Draw()
       nextBlock.Draw(270, 260);
       break;
   }
+
+  if (!pause)
+  {
+    Texture2D music_on_icon = LoadTexture("C:/Users/aneek/Downloads/music_on.png");
+    DrawTexture(music_on_icon, 320, 400, WHITE);
+  } else
+  {
+    Texture2D music_off_icon = LoadTexture("C:/Users/aneek/Downloads/music_off.png");
+    DrawTexture(music_off_icon, 320, 400, WHITE);
+  }
 }
 
 void Game::HandleInput()
